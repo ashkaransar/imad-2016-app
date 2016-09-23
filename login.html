@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- Bootsrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+        <!-- Font awesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+        <!-- PrettyPhoto -->
+        <link rel="stylesheet" href="css/prettyPhoto.css">
+
+        <!-- Template main Css -->
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!-- Modernizr -->
+       <!-- <script src="js/modernizr-2.6.2.min.js"></script>-->
+        
+        <script>
+function validateForm() {
+    var x = document.forms["myForm"]["firstname","gender","bday","username","password","Confirm Password","phno.","emailid"].value;
+    if (x == null || x == "") {
+        alert("Fields must be filled out");
+        return false;
+    }
+	var y= document.forms["myForm"]["Confirm Password"].value;
+	var z= document.forms["myForm"]["password"].value;
+	if (y != z) {
+		alert("password didn't match");
+		return true;
+	}
+	
+}
+</script>
+<style>
+#header{
+	background-color:black;
+	color:white;
+	text-align:left;
+	padding:5px;
+	background-image:url(images/bg-1a.jpg);
+}
+ul.nav{
+list-style-type:none;
+line-height:30px;
+margin:0;
+padding:5px;
+width:10%;
+height:600px;
+background-color:white;
+float:left;
+text-decoration:none;
+}
+#section{
+	background-color:white;
+	width:1000px;
+	float:left;
+	padding:5px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+#box{
+	background-color:white;
+	width:45%;
+	float:left;
+	padding:5px;
+}
+
+#footer{
+	background-color:black;
+	color:white;
+	clear:both;
+	text-align:center;
+	padding:4px
+}
+.city{
+height:800px;
+float:left;
+width:1150px;
+height:800px;
+margin-left:5px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+ul{
+list-style-type:none;
+line-height:30px;
+margin:0;
+padding:5px;
+width:150px;
+height:850px;
+background-color:white;
+float:left;
+text-decoration:none;
+}
+li a{
+display:block;
+color:black;
+padding:8px 0 8px 16px;
+text-decoration:none;
+}
+li a:hover{
+background-color:#555;
+color:white;
+text-decoration:none;
+}
+#js{
+	width:200px;
+	color: #933;
+	font-size:24px;
+	font-family: "Comic Sans MS", cursive;
+}
+</style>
+<title>SAGA Signup</title>
+</head>
+<body>
+<div id="header">
+<h1>SAGA Group of Companies</h1>
+</div>
+
+<div>
+<ul class="navi">
+<li><a href="index1.html">Home</a></li>
+<li><a href="login.html" target="blank">Click to signup</a></li>
+<li><a href="signin.html" target="blank">Sign In Here</a></li>
+<li><a href="gallery.html" target="_blank">Gallery</a></li>
+<li><a href="About1.html">About Us</a></li>
+<li><a href="contactus1.html">Contact</a></li>
+</ul> 
+</div>
+<div class=city style="height:1000px">
+<h2>Sign up</h2>
+<form name="myForm" action="signin.html"
+onsubmit="return validateForm()" method="post">
+
+<h3>Personal Details</h3>
+Firstname:<br>
+<input type="text"  style="padding:5px;width:200px" name="firstname"  autofocus="autofocus" autocomplete="on">
+<br><br />
+Lastname:<br>
+<input type="text" style="padding:5px;width:200px" name="lastname">
+<br><br />
+Gender:<br>
+<input type="radio" name="gender" value="male" required="required">Male<br>
+<input type="radio" name="gender" value="female" required="required">Female<br><br />
+Birthday:<br>
+<input type="date" style="padding:5px;width:200px" name="bday" min="1997-01-01" max="2016-12-31" required="required"><br><br />
+Qualification:<br>
+<select style="padding:5px;width:200px"name="Qualification">
+<option value="sslc">SSLC</option>
+<option value="plus two">Plus Two</option>
+<option value="Graduate">Graduate</option>
+</select><br><br>
+Phone Number:<br />
+<input  type="text" style="padding:5px;width:200px" name="phno." /><br /><br />
+Email ID:<br />
+<input type="email" style="padding:5px;width:200px" name="emailid" /><br /><br />
+
+<h3>Login Details</h3>
+Username:<br>
+<input type="text" style="padding:5px;width:200px" name="username">
+<br><br />
+Password:<br>
+<input type="password" style="padding:5px;width:200px" name="password">
+<br><br />
+Confirm Password:<br>
+<input type="password" style="padding:5px;width:200px" name="Confirm Password">
+<br><br>
+<input type="submit"  style="width:200px;padding:10px"  value="Signup"  onclick="document.getElementById('js')
+.innerHTML='Regstered Successfully"">
+<p id="js"></p>
+</form>
+</div>
+<div id="footer">
+Copyright@sagagropuofcompanies.net
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html><head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+
+        <!-- Bootsrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+<style>
+#header{
+	background-color:black;
+	color:white;
+	text-align:left;
+	padding:5px;
+	background-image:url(images/bg-1a.jpg);
+}
+ul.nav{
+list-style-type:none;
+line-height:30px;
+margin:0;
+padding:5px;
+width:10%;
+height:550px;
+background-color:white;
+float:left;
+text-decoration:none;
+}
+#section{
+	background-color:white;
+	width:1000px;
+	float:left;
+	padding:5px
+}
+#box{
+	background-color:white;
+	width:45%;
+	float:left;
+	padding:5px
+}
+
+#footer{
+	background-color:black;
+	color:white;
+	clear:both;
+	text-align:center;
+	padding:4px
+}
+.city{
+height:700px;
+margin:5px;
+float:left;
+width:1000px;
+height:600px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+a:link{
+color:black;
+}
+a:visited{
+color:green;
+text-decoration:underline;
+}
+a:hover{
+background-color: #099;
+color:white;
+}
+a:active{
+color:black;
+background-color:cyan;
+}
+ul{
+list-style-type:none;
+line-height:30px;
+margin:0;
+padding:5px;
+width:150px;
+height:600px;
+background-color:white;
+float:left;
+text-decoration:none;
+}
+li a{
+display:block;
+color:black;
+padding:8px 0 8px 16px;
+text-decoration:none;
+}
+li a:hover{
+background-color:#555;
+color:white;
+text-decoration:none;
+}
+
+</style>
+<title>SAGA SignIn</title>
+</head>
+<body>
+<div id="header">
+<h1>SAGA Group of Companies</h1>
+</div>
+
+<div>
+<ul class="navi">
+<li><a href="index1.html">Home</a></li>
+<li><a href="gallery.html" target="_blank">Gallery</a></li>
+<li><a href="About1.html">About Us</a></li>
+<li><a href="contactus1.html">Contact</a></li>
+</ul> 
+</div>
+<div class=city>
+<h2>Signin</h2>
+<form name="myForm" method="post" >
+Username:<br>
+<td><input type="text" style="padding:5px;width:200px" placeholder="Enter ur Username" name="username" autofocus="autofocus"></td>
+<br><br />
+Password:<br>
+<td><input type="password" style="padding:5px;width:200px"  placeholder="Enter Password" name="password"></td>
+<br /><br />
+<label><input type="button" formtarget="none" style="padding:5px;width:150px" onclick="check(this.form)" value="Signin"></label>
+
+<label><input type="reset" style="padding:5px;width:150px" value="Reset"></label><br><br>
+
+</form>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.username.value == "saga" && form.password.value == "saga")
+ 
+  {
+    window.open('index1.html')/*opens the target page while Id & password matches*/
+  
+    document.write("Signed in Successfully")
+  }
+ else
+ {
+   alert("Invalid Username or Password")/*displays error message*/
+  }
+}
+</script>
+<p>Forgot Password <a href="forgot.html" target="blank" style="font-size:16px">Click Here</a></p>
+<p>New Users <a href="login.html" target="blank" style="font-size:18px">Signup Here</a></p>
+</div>
+<div id="footer">
+Copyright@sagagropuofcompanies.net
+</div>
+
+</body>
+</html>
+
